@@ -6,10 +6,11 @@ function Testimonio( props ) {
   return (
     <div className='testimonial-container'>
       <img className='testimonial-img' 
-           src={ require(`../images/avatar-${ props.image }.png`) } alt='logo rojo' />
+           src={ require(`../images/avatar-${ props.image }.png`) } 
+           alt={`avatar de ${ props.image }`} />
       <div className='testimonialText-container'>
-        <p className='testimonial-name'>{ props.name } en { props.country } </p>
-        <p className='testimonial-position'>{ props.position } en { props.company } </p>
+        <p className='testimonial-name'> <strong> { props.name } </strong> en { props.country } </p>
+        <p className='testimonial-position'>{ props.position } en <strong> { props.company } </strong> </p>
         <p className='testimonial-text'> "{ props.testimonial }" </p>
       </div>
     </div>
